@@ -1,0 +1,84 @@
+body {
+    font-family: Arial;
+    background-color: lightgray;
+}
+
+header {
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 15px;
+    text-decoration: none;
+}
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+}
+
+h2 {
+    color: darkblue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: lightblue;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+.important {
+    color: darkblue;
+    font-weight: bold;
+}
+
+#name {
+    color: darkblue;
+}
+
+input,
+select {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    padding: 8px;
+    border: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

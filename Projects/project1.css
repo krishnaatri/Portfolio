@@ -1,0 +1,116 @@
+/* =========================================
+   IDOL'S WALL — styles
+   ========================================= */
+
+body {
+    background-color : #eef1f5;   /* soft grey-blue instead of plain white */
+    padding : 20px;
+}
+
+/* 3 cards per row -> 6 idols = 2 rows.
+   row-gap adds space between the rows. */
+.grid {
+    display : grid;
+    grid-template-columns : repeat(3, 1fr);
+    column-gap : 20px;
+    row-gap : 20px;
+    max-width : 1100px;       /* stops cards from stretching too wide on big screens */
+    margin : 0 auto;          /* centers the grid */
+}
+
+/* The text between the two rows.
+   grid-column : 1 / -1 means "start at the first column line
+   and stretch to the last one", so it takes the full width. */
+.wall-title {
+    grid-column : 1 / -1;
+    text-align : center;
+    font-size : 26px;
+    color : #333;
+    margin : 10px 0;
+}
+
+.profile{
+    background-color : white;     /* white cards stand out on the grey page */
+    border-color : grey;
+    border-width : 0px;
+    border-style : solid;
+    box-shadow : 0px 1px 6px rgba(32, 33, 36, 0.28);
+    padding-bottom : 6px;
+    transition : transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover: card moves 8px up (translateY with a negative value = up)
+   and the shadow gets bigger and darker. */
+.profile:hover{
+    transform : translateY(-8px);
+    box-shadow : 0px 10px 24px rgba(32, 33, 36, 0.35);
+}
+
+/* cover fills the whole box and crops only the extra part.
+   The box is now tall (portrait) like the photos, so very little is cut.
+   object-position : top keeps the top of the photo (faces) visible. */
+.pfp{
+    object-fit : cover;
+    object-position : top;
+    width : 100%;
+    height : 440px;
+    margin-bottom : 0px;
+}
+
+.name{
+    margin-top : 3.5px;
+    margin-left : 5px;
+    font-weight : bold;
+    font-size : 18px;
+    margin-bottom : 2px;
+}
+
+.mutuals{
+    margin : 0;
+    color : rgb(148, 143, 143);
+}
+
+.add-button{
+    margin-left : 5px;
+    margin-top : 5px;
+    color : white;
+    background-color : rgb(4, 116, 201);
+    border : none;
+    height : 30px;
+    width : 90px;
+    margin-bottom : 4px;
+    border-radius : 4px;
+}
+
+.idolID{
+    display : block;
+}
+
+.idolName{
+    display : block;
+}
+
+.connect{
+    display : block;
+}
+
+.mypfp{
+    width : 25px;
+    vertical-align : middle;
+    border-radius : 50%;
+}
+
+.mutuals-row{
+    display : grid;
+    grid-template-columns : 30px 1fr;
+    align-items : center;
+    column-gap: 5px;
+    margin-left: 5px;
+}
+
+/* Small screens: one card per row */
+@media (max-width : 700px) {
+    .grid {
+        grid-template-columns : 1fr;
+    }
+}
