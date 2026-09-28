@@ -1,0 +1,449 @@
+/* =========================================
+   1. RESET
+   Removes default browser spacing.
+   box-sizing: border-box = padding and border
+   are counted inside the width.
+   ========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0e17;
+  color: #eaf2fb;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* =========================================
+   2. NAVBAR — Flexbox
+   One row: logo on the left, links on the
+   right (justify-content: space-between).
+   position: sticky keeps it at the top while
+   scrolling; z-index keeps it above content.
+   ========================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #0a0e17;
+  border-bottom: 1px solid #232e42;
+}
+
+.nav-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #93a4bd;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #3fb6ff;
+}
+
+/* =========================================
+   3. BUTTONS
+   Hover = only a color change, smoothly
+   (transition) over 0.2 seconds.
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-primary {
+  background: #3fb6ff;
+  color: #0a0e17;
+}
+
+.btn-primary:hover {
+  background: #6cc9ff;
+}
+
+.btn-outline {
+  border: 1px solid #232e42;
+  color: #eaf2fb;
+}
+
+.btn-outline:hover {
+  border-color: #3fb6ff;
+  color: #3fb6ff;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+/* =========================================
+   4. HERO — Flexbox
+   Text on the left, developer card on the
+   right. flex-wrap: wrap lets the card drop
+   below the text on small screens.
+   ========================================= */
+.hero {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease;
+}
+
+/* Keyframe animation: the hero fades in once when the page loads */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.eyebrow {
+  color: #3fb6ff;
+  margin-bottom: 10px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 8px;
+}
+
+.hero-role {
+  color: #93a4bd;
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.hero-intro {
+  color: #93a4bd;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Developer card */
+.hero-card {
+  flex: 0 1 280px;
+  background: #131a26;
+  border: 1px solid #232e42;
+  border-radius: 12px;
+  padding: 28px;
+  text-align: center;
+}
+
+.avatar-photo {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3fb6ff;
+}
+
+.card-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.card-status {
+  color: #ffb454;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.card-list li {
+  color: #93a4bd;
+  font-size: 14px;
+  padding: 6px 0;
+  border-top: 1px solid #232e42;
+}
+
+/* =========================================
+   5. SHARED SECTION STYLES
+   ========================================= */
+.section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+
+.section-tag {
+  color: #3fb6ff;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  color: #93a4bd;
+  max-width: 600px;
+}
+
+.inline-link {
+  color: #3fb6ff;
+  border-bottom: 1px solid #3fb6ff;
+}
+
+/* =========================================
+   6. EDUCATION — CSS Grid
+   grid-template-columns: 1fr 1fr = two
+   equal-width columns (one card each).
+   Inside a card: 56px logo + text.
+   ========================================= */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.edu-card {
+  background: #131a26;
+  border: 1px solid #232e42;
+  border-radius: 12px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.edu-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  background: #1a2333;
+  border-radius: 50%;
+}
+
+.edu-card h3 {
+  margin-bottom: 4px;
+  font-size: 16px;
+}
+
+.edu-card p {
+  color: #93a4bd;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.edu-status {
+  font-size: 12px;
+  color: #ffb454;
+}
+
+/* =========================================
+   7. SKILLS — CSS Grid + lists (ul / li)
+   ========================================= */
+.skills-lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.skills-lists h3 {
+  font-size: 15px;
+  color: #93a4bd;
+  margin-bottom: 10px;
+}
+
+.skill-list li {
+  padding: 6px 0 6px 18px;
+  position: relative;
+}
+
+/* ::before adds the little blue arrow in front of each list item */
+.skill-list li::before {
+  content: "▸";
+  color: #3fb6ff;
+  position: absolute;
+  left: 0;
+}
+
+/* =========================================
+   8. PROJECTS — CSS Grid (2 columns)
+   ========================================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project-card {
+  background: #131a26;
+  border: 1px solid #232e42;
+  border-radius: 12px;
+  padding: 22px;
+  transition: border-color 0.2s ease;
+}
+
+.project-card:hover {
+  border-color: #3fb6ff;
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #93a4bd;
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tech-tag {
+  font-size: 12px;
+  color: #3fb6ff;
+  border: 1px solid #1c5f85;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+/* Label for the project that is not live yet (Kadverse) */
+.status-tag {
+  display: inline-block;
+  font-size: 14px;
+  color: #ffb454;
+  border: 1px solid #ffb454;
+  padding: 6px 14px;
+  border-radius: 8px;
+}
+
+/* =========================================
+   9. ELSEWHERE — CSS Grid of buttons
+   The buttons use .btn (padding + hover).
+   ========================================= */
+.elsewhere-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.elsewhere-buttons .btn {
+  text-align: center;
+}
+
+/* =========================================
+   10. CONTACT
+   ========================================= */
+.contact-details p {
+  margin-bottom: 10px;
+  color: #93a4bd;
+}
+
+/* =========================================
+   11. FOOTER
+   ========================================= */
+.footer {
+  text-align: center;
+  padding: 24px;
+  color: #93a4bd;
+  font-size: 14px;
+  border-top: 1px solid #232e42;
+}
+
+/* =========================================
+   12. RESPONSIVE — one media query
+   Screens 700px wide or smaller:
+   - navbar stacks (logo on top, links below)
+     and stops sticking so it doesn't cover
+     the small screen
+   - every grid becomes 1 column
+   ========================================= */
+@media (max-width: 700px) {
+  .navbar {
+    position: static;
+  }
+
+  .nav-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+  }
+
+  .education-grid,
+  .skills-lists,
+  .projects-grid,
+  .elsewhere-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-card {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-card {
+    flex: 1 1 100%;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .section {
+    padding: 50px 20px;
+  }
+}

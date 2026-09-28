@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Atri — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <nav class="nav-inner">
+    <a href="#hero" class="logo">Krishna Atri</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#elsewhere">Elsewhere</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Hey, I'm</p>
+      <h1>Krishna Atri</h1>
+      <p class="hero-role">Aspiring Computer Scientist</p>
+      <p class="hero-intro">
+        Exploring the realms of programming, AI, and technology to build
+        innovative solutions — and expanding my knowledge every day.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Developer card -->
+    <div class="hero-card">
+      <img src="Images/Latest_photo.jpg" alt="Krishna Atri" class="avatar-photo">
+      <p class="card-name">Krishna Atri</p>
+      <p class="card-status">Currently building Kadverse</p>
+      <ul class="card-list">
+        <li>Class: CS Student</li>
+        <li>Focus: DSA · AI · Web</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <p class="section-tag">About</p>
+    <p class="about-text">
+      I'm a Computer Science student who likes turning ideas into things
+      that actually run. Most days you'll find me deep in a DSA problem,
+      experimenting with AI, or building out
+      <a href="#projects" class="inline-link">Kadverse</a> — a project I'm
+      growing on the side.
+    </p>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section" id="education">
+    <p class="section-tag">Education</p>
+    <div class="education-grid">
+
+      <div class="edu-card">
+        <img src="Images/bits-logo.jpg" alt="BITS Pilani logo" class="edu-logo">
+        <div>
+          <h3>BITS Pilani</h3>
+          <p>BSc Honours, Computer Science</p>
+          <span class="edu-status">Currently pursuing</span>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <img src="Images/scaler-logo.jpg" alt="Scaler School of Technology logo" class="edu-logo">
+        <div>
+          <h3>Scaler School of Technology</h3>
+          <p>Computer Science &amp; Artificial Intelligence</p>
+          <span class="edu-status">Currently pursuing</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section" id="skills">
+    <p class="section-tag">Skills</p>
+    <div class="skills-lists">
+      <div>
+        <h3>Languages</h3>
+        <ul class="skill-list">
+          <li>C</li>
+          <li>C++</li>
+          <li>Java</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Web</h3>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Core</h3>
+        <ul class="skill-list">
+          <li>Data Structures &amp; Algorithms</li>
+          <li>Discrete Mathematics</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tools</h3>
+        <ul class="skill-list">
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>IntelliJ IDEA</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <p class="section-tag">Projects</p>
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <h3>Student Portal</h3>
+        <p>A basic student portal page with a profile table, a skills list,
+        a weekly schedule and a course registration form.</p>
+        <div class="tech-row">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Table</span>
+          <span class="tech-tag">List</span>
+          <span class="tech-tag">Form</span>
+        </div>
+        <a href="Projects/project2.html" target="_blank" rel="noopener" class="btn btn-small btn-outline">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Idol's Wall</h3>
+        <p>A friend-suggestion style wall of my idols built with CSS Grid.
+        The responsive layout switches to one column on small screens.</p>
+        <div class="tech-row">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">CSS Grid</span>
+          <span class="tech-tag">Responsive</span>
+        </div>
+        <a href="Projects/project1.html" target="_blank" rel="noopener" class="btn btn-small btn-outline">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Flexbox Game</h3>
+        <p>A small game interface with a top bar, hero cards and buttons,
+        laid out with Flexbox, the box model, margin, padding and backgrounds.</p>
+        <div class="tech-row">
+          <span class="tech-tag">HTML</span>
+          <span class="tech-tag">CSS</span>
+          <span class="tech-tag">Flexbox</span>
+        </div>
+        <a href="Projects/project3.html" target="_blank" rel="noopener" class="btn btn-small btn-outline">View Project</a>
+      </article>
+
+      <article class="project-card">
+        <h3>Kadverse</h3>
+        <p>An edtech platform built to give CS students structured,
+        reliable notes for DSA and core computer science subjects.</p>
+        <div class="tech-row">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">Tailwind CSS</span>
+          <span class="tech-tag">Supabase</span>
+        </div>
+        <span class="status-tag">In development · not hosted yet</span>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ================= ELSEWHERE (button links) ================= -->
+  <section class="section" id="elsewhere">
+    <p class="section-tag">Other places you can see me</p>
+    <div class="elsewhere-buttons">
+      <a href="https://github.com/krishnaatri" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+      <a href="https://www.linkedin.com/in/krishna-atri/" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+      <a href="https://leetcode.com/u/krishnaatri08/" target="_blank" rel="noopener" class="btn btn-outline">LeetCode</a>
+      <a href="https://codeforces.com/profile/krishnaatri" target="_blank" rel="noopener" class="btn btn-outline">Codeforces</a>
+      <a href="https://medium.com/@krishnaatri" target="_blank" rel="noopener" class="btn btn-outline">Medium</a>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section" id="contact">
+    <p class="section-tag">Contact me at</p>
+    <div class="contact-details">
+      <p><strong>Email:</strong> <a href="mailto:krishnaatri08@gmail.com" class="inline-link">krishnaatri08@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+918283944686" class="inline-link">+91 82839 44686</a></p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <p>© 2026 Krishna Atri. Built with HTML &amp; CSS.</p>
+</footer>
+
+</body>
+</html>
